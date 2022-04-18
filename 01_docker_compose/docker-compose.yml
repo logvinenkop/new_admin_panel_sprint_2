@@ -1,1 +1,38 @@
+version: '3.8'
+services:
+  movies_db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: $DB_PASSWORD
+      POSTGRES_USER: $DB_USER
+      POSTGRES_DB: $DB_NAME
+    volumes:
+      - .:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
 
+  movies_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: gunicorn movies.wsgi:application --bind 0.0.0.0:8000
+    expose:
+      - 8000
+    env_file:
+      - ./.env
+    depends_on:
+      - movies_db
+  nginx:
+    build:
+      context: ./nginx/
+      dockerfile: Dockerfile
+    ports:
+      - 1337:80
+    depends_on:
+      - movies_app
+      - movies_db
+
+volumes:
+  postgres_data:

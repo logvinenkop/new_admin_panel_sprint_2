@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-04 21:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: movies/admin.py:21
+msgid "rating"
+msgstr "Rating"
+
+#: movies/admin.py:27
+msgid "from 0 to 10"
+msgstr "from 0 to 10"
+
+#: movies/admin.py:28
+msgid "from 10 to 20"
+msgstr "from 10 to 20"
+
+#: movies/admin.py:29
+msgid "from 20 to 30"
+msgstr "from 20 to 30"
+
+#: movies/admin.py:30
+msgid "from 30 to 40"
+msgstr "from 30 to 40"
+
+#: movies/admin.py:31
+msgid "from 40 to 50"
+msgstr "from 40 to 50"
+
+#: movies/admin.py:32
+msgid "from 50 to 60"
+msgstr "from 50 to 60"
+
+#: movies/admin.py:33
+msgid "from 60 to 70"
+msgstr "from 60 to 70"
+
+#: movies/admin.py:34
+msgid "from 70 to 80"
+msgstr "from 70 to 8"
+
+#: movies/admin.py:35
+msgid "from 80 to 90"
+msgstr "from 80 to 90"
+
+#: movies/admin.py:36
+msgid "from 90 to 100"
+msgstr "from 90 to 100"
+
+#: movies/apps.py:8
+msgid "Movies"
+msgstr "Movies"
+
+#: movies/models.py:13
+msgid "created"
+msgstr "Created"
+
+#: movies/models.py:17
+msgid "modified"
+msgstr "Modified"
+
+#: movies/models.py:44
+msgid "Name"
+msgstr "Genre name"
+
+#: movies/models.py:49 movies/models.py:84
+msgid "Description"
+msgstr "Genre description"
+
+#: movies/models.py:57 movies/models.py:142
+msgid "Genre"
+msgstr "Genre"
+
+#: movies/models.py:58
+msgid "Genres"
+msgstr "Genres"
+
+#: movies/models.py:67
+msgid "Full name"
+msgstr "Full name"
+
+#: movies/models.py:73 movies/models.py:163
+msgid "Person"
+msgstr "Person"
+
+#: movies/models.py:74
+msgid "Persons"
+msgstr "Persons"
+
+#: movies/models.py:82
+msgid "Title"
+msgstr "Title"
+
+#: movies/models.py:88
+msgid "Crereation date"
+msgstr "Crereation date"
+
+#: movies/models.py:92
+msgid "Rating"
+msgstr "Rating"
+
+#: movies/models.py:97
+msgid "Type"
+msgstr "Type"
+
+#: movies/models.py:104
+msgid "certificate"
+msgstr "Certificate"
+
+#: movies/models.py:110
+msgid "file"
+msgstr "File"
+
+#: movies/models.py:127 movies/models.py:136 movies/models.py:157
+msgid "Film work"
+msgstr "Film work"
+
+#: movies/models.py:128
+msgid "Film works"
+msgstr "Film works"
+
+#: movies/models.py:148
+msgid "Filmworks gengre"
+msgstr "Filmworks gengre"
+
+#: movies/models.py:149
+msgid "Filmworks gengres"
+msgstr "Filmworks gengres"
+
+#: movies/models.py:165
+msgid "Role"
+msgstr "Role"
+
+#: movies/models.py:170
+msgid "Filmworks person"
+msgstr "Filmworks person"
+
+#: movies/models.py:171
+msgid "Filmworks persons"
+msgstr "Filmworks persons"
