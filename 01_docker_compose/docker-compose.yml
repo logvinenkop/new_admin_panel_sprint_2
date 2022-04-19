@@ -25,6 +25,7 @@ services:
       - static_files:/usr/src/app/static
     depends_on:
       - movies_db
+
   nginx:
     build:
       context: ./nginx/
@@ -39,4 +40,4 @@ services:
 
 volumes:
   postgres_data:
-  static_files: # driver: local
+  static_files:

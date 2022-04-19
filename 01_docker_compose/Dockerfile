@@ -21,5 +21,6 @@ RUN chmod +x entrypoint.sh
 
 # Копируем приложение 
 COPY ./app .
+COPY ./sqlite_to_postgres ./sqlite_to_postgres
 
 ENTRYPOINT ./entrypoint.sh
