@@ -16,7 +16,7 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # Копируем entrypoint.sh
-COPY ./entrypoint.sh .
+COPY ./app/entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
 # Копируем приложение 

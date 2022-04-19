@@ -19,7 +19,7 @@ if [ "$DJANGO_SUPERUSER_USERNAME" ]
 then
     python manage.py createsuperuser --noinput 
 fi
-
+python manage.py collectstatic
 gunicorn movies.wsgi:application --bind 0.0.0.0:8000
 
 # exec "$@"

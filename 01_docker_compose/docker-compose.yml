@@ -17,11 +17,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    # command: gunicorn movies.wsgi:application --bind 0.0.0.0:8000
     expose:
       - 8000
     env_file:
       - ./.env
+    volumes:
+      - static_files:/usr/src/app/static
     depends_on:
       - movies_db
   nginx:
@@ -29,10 +30,13 @@ services:
       context: ./nginx/
       dockerfile: Dockerfile
     ports:
-      - 1337:80
+      - 80:80
+    volumes:
+      - static_files:/data/static
     depends_on:
       - movies_app
       - movies_db
 
 volumes:
   postgres_data:
+  static_files: # driver: local
