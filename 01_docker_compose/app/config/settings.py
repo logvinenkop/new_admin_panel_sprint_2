@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
     "movies.apps.MoviesConfig",
 ]
 
@@ -130,7 +131,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = BASE_DIR/"static"
+STATIC_ROOT = BASE_DIR / "static"
 STATIC_URL = "/static/"
 
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
@@ -140,3 +141,33 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Logging options
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": True,
+    "filters": {
+        "require_debug_true": {
+            "()": "django.utils.log.RequireDebugTrue",
+        }
+    },
+    "formatters": {
+        "default": {
+            "format": "%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]",
+        },
+    },
+    "handlers": {
+        "debug-console": {
+            "class": "logging.StreamHandler",
+            "formatter": "default",
+            "filters": ["require_debug_true"],
+        },
+    },
+    "loggers": {
+        "django.db.backends": {
+            "level": "DEBUG",
+            "handlers": ["debug-console"],
+            "propagate": False,
+        }
+    },
+}
