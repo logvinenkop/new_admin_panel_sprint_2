@@ -132,3 +132,4 @@ dmypy.json
 # Не используемые в проекте файлы
 pg_data/*
 *.code-workspace
+.vscode

@@ -32,6 +32,13 @@ class UUIDMixin(models.Model):
         abstract = True
 
 
+# Класс для выбора значений ролей
+class RoleType(models.TextChoices):
+    ACTOR = "actor", _("Actor")
+    DIRECTOR = "director", _("Director")
+    WRITER = "writer", _("Writer")
+
+
 # Класс для описания таблицы genre
 class Genre(UUIDMixin, TimeStampedMixin):
     def __str__(self):
@@ -175,10 +182,6 @@ class GenreFilmwork(UUIDMixin):
 
 
 class PersonFilmWork(UUIDMixin):
-    class RoleType(models.TextChoices):
-        ACTOR = "actor", _("Actor")
-        DIRECTOR = "director", _("Director")
-        WRITER = "writer", _("Writer")
 
     film_work = models.ForeignKey(
         "Filmwork",
