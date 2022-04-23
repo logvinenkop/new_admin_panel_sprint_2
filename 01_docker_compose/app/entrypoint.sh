@@ -21,7 +21,7 @@ python manage.py createcachetable
 
 if [ "$DJANGO_SUPERUSER_USERNAME" ]
 then
-    python manage.py createsuperuser --noinput 
+    python manage.py createsuperuser --noinput || true
 fi
 
 python manage.py collectstatic
